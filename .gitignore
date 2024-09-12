@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.env
+
+# JetBrains IDE settings
+.idea/
+*.log
