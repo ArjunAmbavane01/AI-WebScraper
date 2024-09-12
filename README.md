@@ -2,6 +2,12 @@
 
 AI Web Scraper is a modern Streamlit application that allows users to scrape websites and analyze content using advanced AI. Unlike traditional tools that rely on remote models, this project uses a local LLM (Ollama) for parsing and analysis.
 
+## Preview
+
+Here is a screenshot of the AI Web Scraper in action:
+
+![AI Web Scraper Screenshot](assets/img1.png)
+
 ## 🛠️ Prerequisites
 
 - **Python 3.8+**
