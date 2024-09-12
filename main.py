@@ -143,12 +143,11 @@ if "dom_content" in st.session_state:
                 result = parse_with_ollama(dom_chunks, parse_description)
                 
                 st.subheader("📊 Parsing Results")
-                # Extract only the keys (e.g., "Tutorials", "Courses") from parsed JSON and display them as plain text
                 plain_text_result = "\n".join(
                     key for item in result if isinstance(item, dict) for key in item.keys()
                 )
                 
-                st.text(plain_text_result)  # Display the headings as plain text
+                st.text(plain_text_result)  
             except Exception as e:
                 st.error(f"An error occurred during parsing: {str(e)}")
             finally:
