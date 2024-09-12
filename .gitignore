@@ -6,3 +6,4 @@ __pycache__/
 # JetBrains IDE settings
 .idea/
 *.log
+chromedriver.exe

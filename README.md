@@ -33,6 +33,7 @@ Follow these steps to set up and run the AI Web Scraper:
 4. Install ChromeDriver:
    - Download the appropriate version of ChromeDriver for your operating system and Chrome browser version from [ChromeDriver Downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads).
    - Extract the downloaded file and place the `chromedriver.exe` (Windows) or `chromedriver` (Mac/Linux) in the root directory of the project.
+   - Note: `chromedriver.exe` is not included in the repository and needs to be downloaded separately.
 
    Note: Make sure the ChromeDriver version matches your installed Chrome browser version.
 
