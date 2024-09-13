@@ -3,7 +3,6 @@ from langchain_core.prompts import ChatPromptTemplate
 import concurrent.futures
 import json
 
-# Updated prompt template
 template = (
     "You are tasked with extracting specific information from the following text content: {dom_content}. "
     "Please follow these instructions carefully: \n\n"
@@ -21,19 +20,14 @@ def parse_chunk(chunk, parse_description):
     chain = prompt | model
     return chain.invoke({"dom_content": chunk, "parse_description": parse_description})
 
-# Function to safely parse response into JSON
 def safe_parse_response(response):
     try:
         # Clean response and remove any non-JSON text
         response = response.strip().strip('```json').strip('```')
-        
-        # Attempt to parse the response as JSON
         return json.loads(response)
     except json.JSONDecodeError:
-        # Return a placeholder if parsing fails
         return {"error": "Invalid JSON", "content": response}
 
-# Main function to parse content with Ollama
 def parse_with_ollama(dom_chunks, parse_description):
     parsed_results = []
 
